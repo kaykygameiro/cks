@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title><?php bloginfo('name') ?> | <?php wp_title('|'); ?></title>
 
-  <link rel="stylesheet" href="/wp-content/themes/handel/style.css" type="text/css">
+  <link rel="stylesheet" href="/wp-content/themes/cks/style.css" type="text/css">
   
   <?php wp_head(); ?>
 </head>
