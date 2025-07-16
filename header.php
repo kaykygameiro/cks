@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title><?php bloginfo('name') ?> | <?php wp_title('|'); ?></title>
+
+  <link rel="stylesheet" href="/wp-content/themes/handel/style.css" type="text/css">
+  
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -31,7 +34,7 @@ $cart_count = WC()->cart->get_cart_contents_count();
 
 <nav class="conta">
 
-<a href="/minha-conta" class="minha-conta">Minha Conta></a>
+<a href="/minha-conta" class="minha-conta">Minha Conta</a>
 <a href="/carrinho" class="carrinho">Carrinho
   <?php if($cart_count)  { ?>
    <span class="carrinho-count"><?=$cart_count?></span>

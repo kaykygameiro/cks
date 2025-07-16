@@ -11,7 +11,7 @@
 @media (max-width: 800px) {
   .header {
     grid-template-columns: 1fr;
-    grid-gap: 20px;
+    grid-gap: 15px;
   }
 }
 
@@ -20,7 +20,7 @@
 }
 
 .busca #s {
-  border: 2px solid #000;
+  border: 1px solid #030303;
   font-size: 1.125rem;
   border-radius: 4px;
   padding: 12px 40px 12px 20px;
@@ -71,7 +71,7 @@
   border-radius: 50%;
   width: 16px;
   height: 16px;
-  background: orangered;
+  background: rgb(0, 0, 0);
   font-size: .7rem;
   font-weight: bold;
   display: flex;
@@ -104,7 +104,7 @@
 
 .menu-categorias a:hover,
 .menu-categorias .current-menu-item a {
-  color: orangered;
+  color: rgb(221, 24, 24);
 }
 
 @media (max-width: 800px) {

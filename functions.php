@@ -5,11 +5,11 @@ function handel_add_woocommerce_support() {
 }
 add_action('after_setup_theme', 'handel_add_woocommerce_support');
 
-function handel_css() {
-  wp_register_style('handel-style', get_template_directory_uri() . '/style.css', [], '1.0.0', false);
-  wp_enqueue_style('handel-style');
-}
-add_action('wp_enqueue_scripts', 'handel_css');
+// CSS carregado manualmente no header.php
+// function handel_css() {
+//   wp_enqueue_style('handel-style', get_template_directory_uri() . '/style.css', [], '1.0.0');
+// }
+// add_action('wp_enqueue_scripts', 'handel_css');
 
 
 function mudar_classe_preco() {
