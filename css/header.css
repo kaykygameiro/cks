@@ -104,7 +104,7 @@
 
 .menu-categorias a:hover,
 .menu-categorias .current-menu-item a {
-  color: rgb(221, 24, 24);
+  color: #FFF2AE;
 }
 
 @media (max-width: 800px) {
