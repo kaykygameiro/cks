@@ -70,7 +70,6 @@ $data['vendidos'] = format_products($products_sales, 'medium');
   <h1 class="subtitulo">Mais Vendidos</h1>
   <?php cks_product_list($data['vendidos']); ?>
 </section>
-</section>
 
 
 <section class="container">
