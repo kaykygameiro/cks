@@ -40,13 +40,13 @@
 
 .slide-preco {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   color: rgba(255,255,255,.5);
   font-weight: 300;
 }
 
 .slide-nome {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 300;
   margin-bottom: 20px;
 }

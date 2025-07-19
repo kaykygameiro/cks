@@ -36,3 +36,37 @@ img {
 .hidden {
   display: none;
 }
+
+.btn-link {
+  padding: 15px;
+  background: #FFD8E9;
+  max-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-link::after {
+  content: '';
+  display: block;
+  background: url('../img/icons/arrow.svg') no-repeat center center;
+  width: 18px;
+  height: 18px;
+}
+
+.subtitulo {
+  text-align: center;
+ /*  text-transform: uppercase; */
+  font-size: 2.375rem;
+  margin-bottom: 60px;
+}
+
+.subtitulo::before,
+.subtitulo::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 6px;
+  
+}
+
