@@ -71,6 +71,13 @@ $data['vendidos'] = format_products($products_sales, 'medium');
   <?php cks_product_list($data['vendidos']); ?>
 </section>
 
+<!-- Banner Revendedor -->
+<section class="banner-revendedor">
+  <a href="https://wa.me/5521964531822?text=Olá%2C+tenho+interesse+em+ser+revendedor+CKS" target="_blank" title="Fale conosco no WhatsApp">
+    <img src="<?= get_template_directory_uri(); ?>/img/bannerRevendedor.png" alt="Seja um Revendedor CKS - clique aqui para saber mais">
+  </a>
+</section>
+
 
 <section class="container">
   <h1 class="subtitulo">Lançamentos</h1>

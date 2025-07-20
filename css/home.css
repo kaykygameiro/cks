@@ -67,3 +67,30 @@
   width: 18px;
   height: 18px;
 }
+
+/* BANNER REVENDEDOR */
+.banner-revendedor {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+
+/* Responsividade do banner */
+@media (max-width: 768px) {
+  .banner-revendedor {
+    margin: 60px auto;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-revendedor {
+    margin: 40px auto;
+    padding: 0 10px;
+  }
+  
+  .banner-revendedor img {
+    border-radius: 4px;
+  }
+}
