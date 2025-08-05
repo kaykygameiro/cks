@@ -37,6 +37,40 @@ img {
   display: none;
 }
 
+/* Container para botão Ver Todos */
+.ver-todos-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.ver-todos-container .btn-link {
+  display: inline-flex;
+  margin: 0 auto;
+  padding: 12px 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0.3px;
+  min-width: auto;
+  max-width: none;
+  white-space: nowrap;
+  justify-content: center;
+  background: linear-gradient(135deg, #FFD8E9, #FFD8E9);
+  color: #000000;
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(212, 71, 111, 0.3);
+  transition: all 0.3s ease;
+}
+
+.ver-todos-container .btn-link:hover {
+  background: linear-gradient(135deg, #b83d5f, #a0355a);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(180, 65, 98, 0.4);
+  color: #ffffff;
+}
+
+
+
 .btn-link {
   padding: 15px;
   background: #FFD8E9;

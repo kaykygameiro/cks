@@ -67,6 +67,10 @@ $data['vendidos'] = format_products($products_sales, 'medium');
 <section class="container">
   <h1 class="subtitulo">Lançamentos</h1>
   <?php cks_product_list($data['lancamentos']); ?>
+  
+  <div class="ver-todos-container">
+    <a href="/loja" class="btn-link">Ver todos os produtos</a>
+  </div>
 </section>
 
 
