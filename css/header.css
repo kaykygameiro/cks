@@ -39,22 +39,27 @@
 
 .conta {
   display: grid;
-  grid-gap: 20px;
-  grid-template-columns: auto auto;
+  grid-gap: 15px;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  justify-content: end;
 }
 
 @media (max-width: 800px) {
   .conta {
-    grid-gap: 40px;
-    justify-content: start;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    justify-content: center;
+    text-align: center;
   }
 }
 
 .conta .minha-conta,
 .conta .carrinho {
-  padding: 5px 0px 5px 34px;
+  padding: 8px 12px 8px 40px;
   background-repeat: no-repeat;
-  background-position: center left;
+  background-position: 12px center;
+  background-size: 20px;
 }
 
 .conta .carrinho {
@@ -67,20 +72,19 @@
 }
 
 .carrinho-count {
-  display: block;
-  border-radius: 50%;
-  width: 16px;
-  height: 16px;
-  background: rgb(0, 0, 0);
-  font-size: .7rem;
-  font-weight: bold;
   display: flex;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  background: #d4476f;
+  font-size: 0.7rem;
+  font-weight: bold;
   align-items: center;
   justify-content: center;
   color: #fff;
   position: absolute;
-  top: 0px;
-  left: 5px;
+  top: 2px;
+  left: 8px;
 }
 
 .menu-categorias {

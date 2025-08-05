@@ -14,9 +14,6 @@ $data['products'] = format_products($products);
 </div>
 
 <article class="container products-archive">
-  <nav class="filtros">
-    <h2>Filtros</h2>
-  </nav>
   <main>
     <?php if($data['products'][0]) { ?>
       <?php cks_product_list($data['products']); ?>

@@ -33,7 +33,7 @@ $cart_count = WC()->cart->get_cart_contents_count();
 </div>
 
 <nav class="conta">
-
+<a href="/loja" class="loja">Loja</a>
 <a href="/minha-conta" class="minha-conta">Minha Conta</a>
 <a href="/carrinho" class="carrinho">Carrinho
   <?php if($cart_count)  { ?>
