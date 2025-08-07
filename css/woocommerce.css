@@ -20,12 +20,12 @@
 } 
 
 .woocommerce-error {
-  border-left: 4px solid orangered;
+  border-left: 4px solid  #ffbad8;
 }
 
 .woocommerce-message,
 .woocommerce-info {
-  border-left: 4px solid olivedrab;
+  border-left: 4px solid  #ffbad8;
 }
 
 /* Formulários */
@@ -189,7 +189,7 @@
 
 .woocommerce-MyAccount-navigation a:hover,
 .woocommerce-MyAccount-navigation .is-active a {
-  background-color: orangered;
+  background-color: #ffbad8;
 }
 
 .woocommerce-MyAccount-content p {

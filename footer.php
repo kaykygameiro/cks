@@ -16,8 +16,7 @@
       <h3>Pagamentos</h3>
       <ul>
         <li>Cartão de Crédito</li>
-        <li>Boleto Bancário</li>
-        <li>PagSeguro</li>
+        <li>Pix</li>
       </ul>
     </section>
     <section>
