@@ -1,11 +1,12 @@
 .header {
   margin: 30px auto;
-  padding: 0 20px;
+  padding: 0 20px 20px 20px;
   display: grid;
   grid-template-columns: minmax(160px, auto) minmax(auto, 600px) minmax(280px, auto);
   justify-content: space-between;
   align-items: center;
   grid-gap: 40px;
+  border-bottom: 1px solid #ffbad8;
 }
 
 @media (max-width: 800px) {
