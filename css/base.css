@@ -58,15 +58,17 @@ img {
   background: linear-gradient(135deg, #FFD8E9, #FFD8E9);
   color: #333333;
   border-radius: 25px;
-  box-shadow: 0 4px 15px rgba(212, 71, 111, 0.3);
   transition: all 0.3s ease;
 }
 
 .ver-todos-container .btn-link:hover {
-  background: linear-gradient(135deg, #b83d5f, #a0355a);
+background: #ff66a8;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(180, 65, 98, 0.4);
   color: #ffffff;
+}
+
+.ver-todos-container .btn-link:hover::after {
+  filter: brightness(0) invert(1);
 }
 
 
