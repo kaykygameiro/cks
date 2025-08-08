@@ -82,4 +82,20 @@ function cks_product_list($products) { ?>
 <?php 
 }
 
+add_filter('gettext', 'cks_traduzir_strings_personalizadas', 20, 3);
+function cks_traduzir_strings_personalizadas($translated_text, $text, $domain) {
+    // Tradução do "Estimated total"
+    if ($translated_text === 'Estimated total') {
+        return 'Total estimado';
+    }
+
+    // Se quiser, pode traduzir mais strings aqui:
+    // if ($translated_text === 'Add coupons') {
+    //     return 'Adicionar cupom';
+    // }
+
+    return $translated_text;
+}
+
+
 ?>
