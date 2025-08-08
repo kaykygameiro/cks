@@ -56,11 +56,7 @@ img {
   white-space: nowrap;
   justify-content: center;
   background: linear-gradient(135deg, #FFD8E9, #FFD8E9);
-<<<<<<< HEAD
   color: #333333;
-=======
-  color: #000000;
->>>>>>> ffbf6466789bbd5c2d7108b4dfc0ae58109615de
   border-radius: 25px;
   box-shadow: 0 4px 15px rgba(212, 71, 111, 0.3);
   transition: all 0.3s ease;

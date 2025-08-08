@@ -30,12 +30,6 @@ $data['vendidos'] = format_products($products_sales, 'medium');
 
 <?php if(have_posts()) { while (have_posts()) { the_post(); ?>
 
-<!-- <ul class="vantagens">
-  <li>Frete Grátis</li>
-  <li>Troca Fácil</li>
-  <li>Até 12x</li>
-</ul> -->
-
 <section class="slide-wrapper">
   <ul class="slide">
     <?php foreach($data['slide'] as $product) { ?>

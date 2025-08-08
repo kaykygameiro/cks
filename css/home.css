@@ -3,7 +3,7 @@
 .slide-item {
   display: grid;
   grid-template-columns: 65% 35%;
-  background: #000;
+  background: #333333;
 }
 
 .slide-info {
@@ -24,8 +24,8 @@
 .slide-preco {
   display: block;
   margin-bottom: 5px;
-  color: rgba(255,255,255,.5);
-  font-weight: 300;
+  color: #ffffff;
+  font-weight: bold;
 }
 
 .slide-nome {
