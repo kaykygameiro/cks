@@ -2,13 +2,18 @@
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   grid-gap: 30px;
+  padding: 40px 20px;
 }
 
 @media (max-width: 800px) {
   .product {
     grid-template-columns: 1fr;
+    padding: 20px 15px;
   }
   .product-gallery {
+    grid-row: 1;
+  }
+  .product-detail {
     grid-row: 2;
   }
 }
