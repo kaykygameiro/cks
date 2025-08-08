@@ -20,12 +20,12 @@
 } 
 
 .woocommerce-error {
-  border-left: 4px solid  #ffbad8;
+  border-left: 4px solid #ffbad8;
 }
 
 .woocommerce-message,
 .woocommerce-info {
-  border-left: 4px solid  #ffbad8;
+  border-left: 4px solid #ffbad8;
 }
 
 /* Formulários */
@@ -55,14 +55,72 @@
   margin-right: 10px;
 }
 
+/* Botão do carrinho - cor rosa */
 .woocommerce-cart a.button.alt {
-  text-transform: capitalize;
-  font-weight: 500;
-  background-color: #0066BB;
+  background: #ffbad8 !important;
+  background-color: #ffbad8 !important;
+  color: #333 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 15px 25px !important;
+  font-weight: 600 !important;
+  font-size: 1.1rem !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  display: block !important;
+  text-align: center !important;
+  transition: all 0.3s ease !important;
+  width: 100% !important;
 }
 
 .woocommerce-cart a.button.alt:hover {
-  background-color: #1188ee;
+  background: #ff9bc8 !important;
+  background-color: #ff9bc8 !important;
+  color: #333 !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Botões de finalização - todas as variações */
+.woocommerce .wc-proceed-to-checkout a.checkout-button,
+.woocommerce .wc-proceed-to-checkout a.button.alt,
+.woocommerce .wc-proceed-to-checkout a,
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button,
+.woocommerce-cart .wc-proceed-to-checkout a.button.alt,
+.woocommerce-cart .wc-proceed-to-checkout a,
+.wc-proceed-to-checkout a.checkout-button,
+.wc-proceed-to-checkout a.button.alt,
+.wc-proceed-to-checkout a {
+  background: #ffbad8 !important;
+  background-color: #ffbad8 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 15px 25px !important;
+  color: #333 !important;
+  font-weight: 600 !important;
+  font-size: 1.1rem !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  display: block !important;
+  text-align: center !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.woocommerce .wc-proceed-to-checkout a.checkout-button:hover,
+.woocommerce .wc-proceed-to-checkout a.button.alt:hover,
+.woocommerce .wc-proceed-to-checkout a:hover,
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover,
+.woocommerce-cart .wc-proceed-to-checkout a.button.alt:hover,
+.woocommerce-cart .wc-proceed-to-checkout a:hover,
+.wc-proceed-to-checkout a.checkout-button:hover,
+.wc-proceed-to-checkout a.button.alt:hover,
+.wc-proceed-to-checkout a:hover {
+  background: #ff9bc8 !important;
+  background-color: #ff9bc8 !important;
+  color: #333 !important;
+  transform: translateY(-2px) !important;
 }
 
 .woocommerce-cart .cart_totals h2 {
@@ -76,7 +134,6 @@
 }
 
 /* Checkout */
-
 .woocommerce-form-coupon-toggle {
   display: none;
 }
@@ -118,11 +175,12 @@
   margin-top: 20px;
   font-size: 1.25rem;
   padding: 15px 30px;
-  background-color: #0066bb !important;
+  background-color: #ffbad8 !important;
+  color: #333 !important;
 }
 
 .woocommerce #payment #place_order:hover {
-  background-color: #1188ee !important;
+  background-color: #ff9bc8 !important;
 }
 
 .woocommerce form.checkout_coupon,
@@ -144,7 +202,6 @@
 }
 
 /* Minha Conta */
-
 .woocommerce-account h2 {
   font-size: 1.25rem;
   margin: 10px 0;
@@ -174,7 +231,6 @@
 }
 
 /* Estilo Sidmenu */
-
 .woocommerce-MyAccount-navigation ul {
   background-color: #111;
 }
@@ -206,14 +262,14 @@
 }
 
 /* Pedido Recebido */
-
 .woocommerce-order-received h2 {
   font-size: 1.25rem;
   margin: 10px 0;
 }
+
 .woocommerce-order-received .woocommerce-thankyou-order-received {
   color: #fff;
-  background-color: #0066BB;
+  background-color: #ffbad8;
   padding: 15px;
   border-radius: 4px;
   margin-bottom: 30px;
@@ -240,26 +296,199 @@
 
 .woocommerce-page .woocommerce-message .button {
   font-weight: normal;
-  color: #fff;
-  background: #0066BB;
+  color: #333;
+  background: #ffbad8;
 }
 
 .woocommerce-page .woocommerce-message .button:hover {
-  color: #fff;
-  background: #1188ee;
+  color: #333;
+  background: #ff9bc8;
 }
 
 .woocommerce-orders-table__cell-order-actions a {
   margin: 5px !important;
 }
 
-/* Digital */
-
+/* Botões gerais WooCommerce */
 .woocommerce a.button.alt {
   font-weight: normal;
-  background-color: #0066bb;
+  background-color: #ffbad8;
+  color: #333;
 }
 
 .woocommerce a.button.alt:hover {
-  background-color: #1188ee;
+  background-color: #ff9bc8;
+}
+
+/* === BLOCOS WOOCOMMERCE (GUTENBERG) === */
+
+/* Bloco do botão continuar para finalização */
+.wp-block-woocommerce-proceed-to-checkout-block,
+.wc-block-cart__submit,
+.wp-block-woocommerce-proceed-to-checkout-block .wc-block-cart__submit {
+  background: #ffbad8 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 15px 25px !important;
+  color: #333 !important;
+  font-weight: 600 !important;
+  font-size: 1.1rem !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  display: block !important;
+  text-align: center !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+  width: 100% !important;
+}
+
+.wp-block-woocommerce-proceed-to-checkout-block:hover,
+.wc-block-cart__submit:hover,
+.wp-block-woocommerce-proceed-to-checkout-block .wc-block-cart__submit:hover {
+  background: #ff9bc8 !important;
+  color: #333 !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Estilos para botões dentro dos blocos */
+.wc-block-cart__submit-button,
+.wc-block-components-checkout-place-order-button,
+.wc-block-components-button {
+  background: #ffbad8 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 15px 25px !important;
+  color: #333 !important;
+  font-weight: 600 !important;
+  font-size: 1.1rem !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+.wc-block-cart__submit-button:hover,
+.wc-block-components-checkout-place-order-button:hover,
+.wc-block-components-button:hover {
+  background: #ff9bc8 !important;
+  color: #333 !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Container dos blocos */
+.wp-block-woocommerce-cart,
+.wp-block-woocommerce-checkout {
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Estilos para todos os elementos com classes wc-block */
+[class*="wc-block"] button,
+[class*="wc-block"] .button,
+[class*="wp-block-woocommerce"] button,
+[class*="wp-block-woocommerce"] .button {
+  background: #ffbad8 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 15px 25px !important;
+  color: #333 !important;
+  font-weight: 600 !important;
+  font-size: 1.1rem !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+[class*="wc-block"] button:hover,
+[class*="wc-block"] .button:hover,
+[class*="wp-block-woocommerce"] button:hover,
+[class*="wp-block-woocommerce"] .button:hover {
+  background: #ff9bc8 !important;
+  color: #333 !important;
+  transform: translateY(-2px) !important;
+}
+
+/* === AJUSTES DE TAMANHO ESPECÍFICOS === */
+
+/* Botões de quantidade (+ e -) menores */
+[class*="wc-block-cart-item__quantity"] button,
+.wc-block-cart-item__quantity-stepper button,
+.wc-block-components-quantity-selector button {
+  padding: 8px 12px !important;
+  font-size: 1rem !important;
+  min-width: 35px !important;
+  min-height: 35px !important;
+  border-radius: 4px !important;
+}
+
+/* Botão remover item menor */
+[class*="remove-item"] button,
+.wc-block-cart-item__remove-link,
+.wc-block-cart-item__remove-link button {
+  padding: 8px 15px !important;
+  font-size: 0.9rem !important;
+  text-transform: capitalize !important;
+  min-height: auto !important;
+  border-radius: 6px !important;
+}
+
+/* Campo de quantidade input menor */
+[class*="wc-block-cart-item__quantity"] input,
+.wc-block-components-quantity-selector input {
+  padding: 8px !important;
+  font-size: 1rem !important;
+  text-align: center !important;
+  max-width: 60px !important;
+  margin: 0 5px !important;
+}
+
+/* Manter o botão CONTINUAR PARA FINALIZAÇÃO grande */
+.wc-block-cart__submit-container button,
+.wc-block-cart__submit-button,
+[class*="proceed-to-checkout"] button {
+  padding: 15px 25px !important;
+  font-size: 1.1rem !important;
+  width: 100% !important;
+}
+
+/* === TRADUÇÕES E TEXTOS CUSTOMIZADOS === */
+
+/* Substituir "Estimated total" por "Total" usando JavaScript */
+.wc-block-components-totals-item__label {
+  position: relative;
+}
+
+/* Ocultar o texto original e mostrar "Total" */
+.wc-block-components-totals-item--estimated-total .wc-block-components-totals-item__label,
+.wc-block-components-totals-item__label:contains("Estimated") {
+  visibility: hidden;
+  position: relative;
+}
+
+.wc-block-components-totals-item--estimated-total .wc-block-components-totals-item__label::after,
+.wc-block-components-totals-item__label[data-estimated="true"]::after {
+  content: "Total";
+  visibility: visible;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Tradução dos botões via CSS quando possível */
+.wc-proceed-to-checkout a[href*="checkout"]::after,
+.wp-block-woocommerce-proceed-to-checkout-block a::after {
+  content: " ";
+}
+
+/* Garantir que os botões traduzidos mantenham o estilo */
+a.checkout-button,
+.wc-block-cart__submit-button,
+.wp-block-woocommerce-proceed-to-checkout-block a {
+  text-align: center !important;
+  display: inline-block !important;
+  min-width: 200px !important;
 }

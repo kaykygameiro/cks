@@ -82,6 +82,108 @@ function cks_product_list($products) { ?>
 <?php 
 }
 
+// Traduzir textos do WooCommerce
+function cks_translate_woocommerce_texts($translated_text, $text, $domain) {
+  switch ($translated_text) {
+    case 'Estimated total':
+      $translated_text = __('Total', 'woocommerce');
+      break;
+    case 'Subtotal':
+      $translated_text = __('Subtotal', 'woocommerce');
+      break;
+    case 'Total':
+      $translated_text = __('Total', 'woocommerce');
+      break;
+    case 'Proceed to checkout':
+      $translated_text = __('Avançar para o pagamento', 'woocommerce');
+      break;
+    case 'Continue to checkout':
+      $translated_text = __('Avançar para o pagamento', 'woocommerce');
+      break;
+  }
+  return $translated_text;
+}
+add_filter('gettext', 'cks_translate_woocommerce_texts', 10, 3);
 
+// Filtro específico para blocos WooCommerce
+function cks_translate_woocommerce_blocks($translated_text, $text, $domain) {
+  if ($domain === 'woo-gutenberg-products-block' || $domain === 'woocommerce') {
+    switch ($text) {
+      case 'Estimated total':
+        return 'Total';
+      case 'estimated total':
+        return 'total';
+      case 'Proceed to checkout':
+        return 'Avançar para o pagamento';
+      case 'Continue to checkout':
+        return 'Avançar para o pagamento';
+    }
+  }
+  return $translated_text;
+}
+add_filter('gettext', 'cks_translate_woocommerce_blocks', 20, 3);
+
+// Adicionar JavaScript para traduzir textos dinamicamente
+function cks_translate_estimated_total_js() {
+  ?>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    function translateTexts() {
+      // Selecionar todos os elementos que podem conter "Estimated total"
+      const labels = document.querySelectorAll('.wc-block-components-totals-item__label, .cart-totals th, .shop_table th');
+      
+      labels.forEach(function(label) {
+        if (label.textContent.includes('Estimated total')) {
+          label.textContent = label.textContent.replace('Estimated total', 'Total');
+        }
+        if (label.textContent.includes('estimated total')) {
+          label.textContent = label.textContent.replace('estimated total', 'total');
+        }
+      });
+      
+      // Traduzir botões de finalização
+      const buttons = document.querySelectorAll('a.checkout-button, .wc-block-cart__submit-button, .wp-block-woocommerce-proceed-to-checkout-block a, .wc-proceed-to-checkout a');
+      
+      buttons.forEach(function(button) {
+        if (button.textContent.includes('Proceed to checkout')) {
+          button.textContent = button.textContent.replace('Proceed to checkout', 'Avançar para o pagamento');
+        }
+        if (button.textContent.includes('Continue to checkout')) {
+          button.textContent = button.textContent.replace('Continue to checkout', 'Avançar para o pagamento');
+        }
+        if (button.textContent.includes('Continuar para finalização')) {
+          button.textContent = button.textContent.replace('Continuar para finalização', 'Avançar para o pagamento');
+        }
+        if (button.textContent.includes('Finalizar compra')) {
+          button.textContent = button.textContent.replace('Finalizar compra', 'Avançar para o pagamento');
+        }
+      });
+    }
+    
+    // Executar na carga da página
+    translateTexts();
+    
+    // Executar quando o DOM muda (para blocos dinâmicos)
+    const observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        if (mutation.type === 'childList') {
+          translateTexts();
+        }
+      });
+    });
+    
+    // Observar mudanças no carrinho
+    const cartContainer = document.querySelector('.wc-block-cart, .woocommerce-cart');
+    if (cartContainer) {
+      observer.observe(cartContainer, {
+        childList: true,
+        subtree: true
+      });
+    }
+  });
+  </script>
+  <?php
+}
+add_action('wp_footer', 'cks_translate_estimated_total_js');
 
 ?>
