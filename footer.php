@@ -25,10 +25,10 @@
         <a href="https://facebook.com/ckscosmeticos" target="_blank" title="Facebook">
           <img src="<?= get_template_directory_uri(); ?>/img/icons/facebook.svg" alt="Facebook">
         </a>
-        <a href="https://instagram.com/ckscosmeticos" target="_blank" title="Instagram">
+        <a href="https://www.instagram.com/cosmeticoscks/" target="_blank" title="Instagram">
           <img src="<?= get_template_directory_uri(); ?>/img/icons/instagram.svg" alt="Instagram">
         </a>
-        <a href="https://wa.me/5511999999999" target="_blank" title="WhatsApp">
+        <a href="https://wa.me/5521964531822" target="_blank" title="WhatsApp">
           <img src="<?= get_template_directory_uri(); ?>/img/icons/whatsapp.svg" alt="WhatsApp">
         </a>
       </div>
