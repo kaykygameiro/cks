@@ -84,41 +84,24 @@ function cks_product_list($products) { ?>
 
 // Traduzir textos do WooCommerce
 function cks_translate_woocommerce_texts($translated_text, $text, $domain) {
-  switch ($translated_text) {
-    case 'Estimated total':
-      $translated_text = __('Total', 'woocommerce');
-      break;
-    case 'Subtotal':
-      $translated_text = __('Subtotal', 'woocommerce');
-      break;
-    case 'Total':
-      $translated_text = __('Total', 'woocommerce');
-      break;
-    case 'Proceed to checkout':
-      $translated_text = __('Avançar para o pagamento', 'woocommerce');
-      break;
-    case 'Continue to checkout':
-      $translated_text = __('Avançar para o pagamento', 'woocommerce');
-      break;
-  }
+  // Só processa se for domínio WooCommerce
+  if ($domain !== 'woocommerce') return $translated_text;
+  // Evita loops e só traduz se necessário
+  if ($translated_text === 'Estimated total') return 'Total';
+  if ($translated_text === 'Subtotal') return 'Subtotal';
+  if ($translated_text === 'Total') return 'Total';
+  if ($translated_text === 'Proceed to checkout' || $translated_text === 'Continue to checkout') return 'Avançar para o pagamento';
   return $translated_text;
 }
 add_filter('gettext', 'cks_translate_woocommerce_texts', 10, 3);
 
 // Filtro específico para blocos WooCommerce
 function cks_translate_woocommerce_blocks($translated_text, $text, $domain) {
-  if ($domain === 'woo-gutenberg-products-block' || $domain === 'woocommerce') {
-    switch ($text) {
-      case 'Estimated total':
-        return 'Total';
-      case 'estimated total':
-        return 'total';
-      case 'Proceed to checkout':
-        return 'Avançar para o pagamento';
-      case 'Continue to checkout':
-        return 'Avançar para o pagamento';
-    }
-  }
+  // Só processa se for domínio dos blocos
+  if ($domain !== 'woo-gutenberg-products-block') return $translated_text;
+  if ($translated_text === 'Estimated total') return 'Total';
+  if ($translated_text === 'estimated total') return 'total';
+  if ($translated_text === 'Proceed to checkout' || $translated_text === 'Continue to checkout') return 'Avançar para o pagamento';
   return $translated_text;
 }
 add_filter('gettext', 'cks_translate_woocommerce_blocks', 20, 3);

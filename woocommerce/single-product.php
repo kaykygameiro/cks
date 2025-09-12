@@ -4,7 +4,7 @@
   function format_single_product($id, $img_size = 'medium') {
     $product = wc_get_product($id);
 
-    $gallery_ids = $product->get_gallery_attachment_ids();
+  $gallery_ids = $product->get_gallery_image_ids();
     $gallery = [];
     if($gallery_ids) {
       foreach($gallery_ids as $img_id) {
