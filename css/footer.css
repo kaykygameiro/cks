@@ -1,6 +1,6 @@
 .footer {
-  background: #000 !important;
-  padding-top: 60px;
+  background: #FF92C1 !important;
+  padding-top: 50px;
 }
 
 .footer img {
@@ -11,7 +11,7 @@
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr;
   grid-gap: 30px;
-  color: rgba(255, 255, 255, .7);
+  color: rgb(255, 255, 255);
 }
 
 @media (max-width: 800px) {
@@ -31,7 +31,7 @@
   display: inline-block;
   width: 10px;
   height: 2px;
-  background: #fff;
+  background: #ffffff;
   margin-right: 10px;
 }
 
@@ -42,7 +42,7 @@
 }
 
 .footer a {
-  color: rgba(255, 255, 255, .7);
+  color: rgb(255, 255, 255);
 }
 
 .footer-menu ul {
