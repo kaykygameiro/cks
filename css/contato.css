@@ -1,0 +1,98 @@
+.page-contato-container {
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
+
+.contato-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 80px;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .contato-grid {
+        grid-template-columns: 1fr;
+        grid-gap: 50px;
+    }
+}
+
+.contato-info h2, .contato-mapa h2 {
+    font-size: 2rem;
+    color: #BE2567;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.contato-lista {
+    margin: 30px 0 40px 0;
+}
+
+.contato-lista li {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+.contato-lista li strong {
+    display: block;
+    color: #BE2567;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.contato-social a {
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.contato-social a:hover {
+    color: #BE2567;
+}
+
+/* Melhoria no Card de Revendedor */
+.contato-revenda-card {
+    background: #fff;
+    padding: 35px;
+    border-radius: 12px;
+    border: 1px solid #ffbad8;
+    box-shadow: 0 10px 30px rgba(190, 37, 103, 0.05);
+    transition: transform 0.3s;
+}
+
+.contato-revenda-card:hover {
+    transform: translateY(-5px);
+}
+
+.contato-revenda-card h3 {
+    margin-bottom: 15px;
+    color: #BE2567;
+    font-size: 1.4rem;
+}
+
+.contato-revenda-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    color: #666;
+}
+
+.contato-revenda-card .btn-link {
+    background: #BE2567;
+    color: #fff;
+    max-width: 100%;
+    justify-content: center;
+    border-radius: 30px;
+    font-weight: 500;
+    padding: 15px 30px;
+}
+
+/* Estilo do Mapa */
+.mapa-container {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #ffbad8;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}

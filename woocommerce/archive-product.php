@@ -9,9 +9,7 @@ $data = [];
 $data['products'] = format_products($products);
 ?>
 
-<div class="container breadcrumb">
-  <?php woocommerce_breadcrumb(['delimiter' => ' > ']); ?>
-</div>
+<h1 class="titulo">Loja</h1>
 
 <article class="container products-archive">
   <main>

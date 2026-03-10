@@ -33,7 +33,7 @@ function cks_custom_images(){
 add_action('after_setup_theme', 'cks_custom_images');
 
 function cks_loop_shop_per_page() {
-  return 6;
+  return -1;
 }
 add_filter('loop_shop_per_page', 'cks_loop_shop_per_page');
 

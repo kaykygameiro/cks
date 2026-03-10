@@ -71,7 +71,7 @@
 }
 
 .product-detail .button {
-  background: #000;
+  background: #333333;
   color: #fff;
   padding: 12px 15px;
   min-width: 200px;
@@ -94,9 +94,6 @@
   transition: .3s;
 }
 
-.product-detail .button:hover::after {
-  transform: rotate(180deg);
-}
 
 .product-detail .button.disabled {
   opacity: .5;

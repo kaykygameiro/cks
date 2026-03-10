@@ -9,13 +9,13 @@ $products_slide = wc_get_products([
 ]);
 
 $products_new = wc_get_products([
-  'limit' => 9,
+  'limit' => 6,
   'orderby' => 'date',
   'order' => 'DESC'
 ]);
 
 $products_sales = wc_get_products([
-  'limit' => 9,
+  'limit' => 6,
   'meta_key' => 'total_sales',
   'orderby' => 'meta_value_num',
   'order' => 'DESC'
