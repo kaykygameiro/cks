@@ -45,6 +45,14 @@ $data['vendidos'] = format_products($products_sales, 'medium');
   </ul>
 </section>
 
+<section class="container home-about">
+  <div class="home-about__content">
+    <span>CKS Cosméticos</span>
+    <h2>Sobre a CKS Cosméticos</h2>
+    <p>A CKS Cosméticos oferece produtos capilares para cuidado, hidratação, reconstrução e finalização dos fios, com atendimento para clientes e revendedores.</p>
+  </div>
+</section>
+
 <section class="container home-product-section">
   <h1 class="subtitulo">Mais Vendidos</h1>
   <?php cks_product_list($data['vendidos']); ?>
@@ -53,7 +61,7 @@ $data['vendidos'] = format_products($products_sales, 'medium');
 <!-- Banner Revendedor -->
 <section class="banner-revendedor">
   <a href="https://wa.me/5521964531822?text=Ol%C3%A1%2C+tenho+interesse+em+ser+revendedor+CKS" target="_blank" rel="noopener" title="Fale conosco no WhatsApp">
-    <img src="<?= esc_url(get_template_directory_uri()); ?>/img/bannerRevendedor.png" alt="Seja um Revendedor CKS - clique aqui para saber mais">
+    <img src="<?= esc_url(get_template_directory_uri()); ?>/img/imagemBanner2.jpeg" alt="Seja um Revendedor CKS - clique aqui para saber mais">
   </a>
 </section>
 
@@ -66,13 +74,7 @@ $data['vendidos'] = format_products($products_sales, 'medium');
   </div>
 </section>
 
-<section class="container home-about">
-  <div class="home-about__content">
-    <span>CKS Cosméticos</span>
-    <h2>Sobre a CKS Cosméticos</h2>
-    <p>A CKS Cosméticos oferece produtos capilares para cuidado, hidratação, reconstrução e finalização dos fios, com atendimento para clientes e revendedores.</p>
-  </div>
-</section>
+
 
 <?php } } ?>
 
