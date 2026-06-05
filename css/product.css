@@ -49,8 +49,9 @@
 
 .product-detail h1 {
   font-size: 1.5rem;
-  font-weight: 400;
-  margin-bottom: 40px;
+  font-weight: 800;
+  margin-bottom: 24px;
+  color: var(--cks-ink);
 }
 
 .product-detail h2 {
@@ -62,6 +63,8 @@
 .product-detail .product-price {
   margin-bottom: 20px;
   font-weight: bold;
+  color: var(--cks-pink);
+  font-size: 1.3rem;
 }
 
 @media (max-width: 800px) {
@@ -71,18 +74,27 @@
 }
 
 .product-detail .button {
-  background: #333333;
+  background: var(--cks-pink-strong);
   color: #fff;
-  padding: 12px 15px;
+  padding: 14px 18px;
   min-width: 200px;
   font-size: 1rem;
   cursor: pointer;
   border: none;
+  border-radius: var(--cks-radius);
   margin-top: 20px;
   margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-weight: 800;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.product-detail .button:hover {
+  background: var(--cks-pink);
+  transform: translateY(-1px);
+  box-shadow: var(--cks-shadow);
 }
 
 .product-detail .button::after {

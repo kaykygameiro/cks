@@ -1,6 +1,8 @@
 .footer {
-  background-color: #BE2567 !important;
+  background: linear-gradient(135deg, var(--cks-pink), #8f174a) !important;
   color: white;
+  margin-top: 80px;
+  padding-top: 34px;
 }
 
 
@@ -11,14 +13,16 @@
 
 .footer-info {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
-  grid-gap: 30px;
+  grid-template-columns: 1.3fr 1fr 1fr 1fr;
+  grid-gap: 28px;
   color: rgb(255, 255, 255);
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 800px) {
   .footer-info {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -39,8 +43,11 @@
 
 .footer-info h3 {
   color: #fff;
-  padding-left: 20px;
+  padding-left: 0;
   margin-bottom: 20px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .04rem;
 }
 
 .footer a {
@@ -56,8 +63,9 @@
   display: block;
   padding: 20px 10px;
   background: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
+  color: var(--cks-ink);
   text-align: center;
+  font-size: .9rem;
 }
 
 /* Ícones das Redes Sociais */
@@ -78,6 +86,11 @@
   border-radius: 50%;
   transition: all 0.3s ease;
   text-decoration: none;
+}
+
+.footer-redes-icons a:hover {
+  background: rgba(255, 255, 255, .22);
+  transform: translateY(-2px);
 }
 
 
@@ -121,6 +134,10 @@
 }
 
 @media (max-width: 480px) {
+  .footer-info {
+    grid-template-columns: 1fr;
+  }
+
   .footer-info h3 {
     text-align: center;
     padding-left: 0;

@@ -1,10 +1,12 @@
 .slide-wrapper {
     overflow: hidden;
+    max-width: 100%;
     margin-top: 60px;
 }
 
 .slide {
     display: flex;
+    align-items: center;
 }
 
 .slide:hover {
@@ -15,7 +17,7 @@
     flex-shrink: 0;
     width: 80vw;
     max-width: 800px;
-    margin: 0 20px;
+    margin: 0 14px;
     border-radius: 4px;
     overflow: hidden;
     box-shadow: 0 2px 4px #575757;
@@ -54,4 +56,11 @@
 [data-control="slide"] li.active a,
 [data-control="slide"] li a:hover {
     background: #ffbad8;
+}
+
+@media (max-width: 480px) {
+    .slide li {
+        width: calc(100vw - 30px);
+        margin: 0 8px;
+    }
 }

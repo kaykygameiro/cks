@@ -17,6 +17,15 @@
       <ul>
         <li>Cartão de Crédito</li>
         <li>Pix</li>
+        <li>Compra segura</li>
+      </ul>
+    </section>
+    <section>
+      <h3>Atendimento</h3>
+      <ul>
+        <li>Entrega para todo o Brasil</li>
+        <li>Produtos para revenda</li>
+        <li><a href="https://wa.me/5521964531822" target="_blank">Chamar no WhatsApp</a></li>
       </ul>
     </section>
     <section>
@@ -36,13 +45,16 @@
   
   </div>
   <?php
-    $countries = WC()->countries;
-    $base_address = $countries->get_base_address();
-    $base_city = $countries->get_base_city();
-    $base_state = $countries->get_base_state();
-    $complete_address = "$base_address, $base_city, $base_state";
+    $complete_address = '';
+    if (function_exists('WC') && WC() && WC()->countries) {
+      $countries = WC()->countries;
+      $base_address = $countries->get_base_address();
+      $base_city = $countries->get_base_city();
+      $base_state = $countries->get_base_state();
+      $complete_address = "$base_address, $base_city, $base_state";
+    }
   ?>
-  <small class="footer-copy">Cks Cosméticos &copy; <?= date('Y'); ?> - <?= $complete_address; ?></small>
+  <small class="footer-copy">Cks Cosméticos &copy; <?= date('Y'); ?><?= $complete_address ? ' - ' . $complete_address : ''; ?></small>
 </footer>
 <?php wp_footer(); ?>
 <script src="<?= get_stylesheet_directory_uri(); ?>/js/slide.js"></script>

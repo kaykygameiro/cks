@@ -30,6 +30,9 @@ $data['vendidos'] = format_products($products_sales, 'medium');
 
 <?php if(have_posts()) { while (have_posts()) { the_post(); ?>
 
+
+
+
 <section class="slide-wrapper">
   <ul class="slide">
     <?php foreach($data['slide'] as $product) { ?>
@@ -43,6 +46,26 @@ $data['vendidos'] = format_products($products_sales, 'medium');
     </li>
     <?php } ?>
   </ul>
+</section>
+
+
+<section class="container benefits-strip">
+  <div class="benefit-item">
+    <strong>Entrega para todo o Brasil</strong>
+    <span>Receba seus produtos CKS em casa.</span>
+  </div>
+  <div class="benefit-item">
+    <strong>Pix e cartão</strong>
+    <span>Escolha a melhor forma de pagamento.</span>
+  </div>
+  <div class="benefit-item">
+    <strong>WhatsApp</strong>
+    <span>Atendimento direto para tirar dúvidas.</span>
+  </div>
+  <div class="benefit-item">
+    <strong>Produtos para revenda</strong>
+    <span>Fale com a equipe e conheça as condições.</span>
+  </div>
 </section>
 
 <section class="container">

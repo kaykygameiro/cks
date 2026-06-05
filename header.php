@@ -16,15 +16,27 @@
 <?php 
 
 $img_url = get_template_directory_uri() . '/img/';
-$cart_count = WC()->cart->get_cart_contents_count();
+$cart_count = 0;
+if (function_exists('WC') && WC() && WC()->cart) {
+  $cart_count = WC()->cart->get_cart_contents_count();
+}
 ?>
 
+<div class="site-benefits-bar">
+  <div class="container site-benefits-bar__inner">
+    <span>Entrega para todo o Brasil</span>
+    <span>Pix e cartão</span>
+    <span>Atendimento pelo WhatsApp</span>
+    <span>Produtos para revenda</span>
+  </div>
+</div>
+
 <header class="header container">
-<a href="/"><img src="<?= $img_url; ?>/cks.png" alt="Cks"></a>
+<a class="header-logo" href="/"><img src="<?= $img_url; ?>/cks.png" alt="CKS Cosméticos"></a>
 
 <div class="busca">
   <form action="<?php bloginfo('url'); ?>/loja/" method="get">
-    <input type="text" name="s" id="s" placeholder="Buscar..." value="<?php 
+    <input type="text" name="s" id="s" placeholder="Buscar produtos CKS" value="<?php 
     the_search_query(); ?>" />
     <input type="text" name="post_type" value="product" class="hidden" />
     <input type="submit" id="searchbutton" value="Buscar" />
