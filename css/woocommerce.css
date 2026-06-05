@@ -718,6 +718,16 @@ a.checkout-button,
   height: 100%;
 }
 
+.woocommerce .product-image,
+.woocommerce-page .product-image {
+  background: #fff !important;
+}
+
+.woocommerce .product-image img,
+.woocommerce-page .product-image img {
+  padding: 6px !important;
+}
+
 .woocommerce .product-card h2,
 .woocommerce-page .product-card h2,
 .woocommerce ul.products li.product .woocommerce-loop-product__title,

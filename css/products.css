@@ -73,14 +73,14 @@
   aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: var(--cks-radius);
-  background: var(--cks-rose-50);
+  background: #fff;
 }
 
 .product-image img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  padding: 10px;
+  padding: 6px;
   transition: transform .2s ease;
 }
 
