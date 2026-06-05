@@ -30,66 +30,49 @@ $data['vendidos'] = format_products($products_sales, 'medium');
 
 <?php if(have_posts()) { while (have_posts()) { the_post(); ?>
 
-
-
-
 <section class="slide-wrapper">
   <ul class="slide">
     <?php foreach($data['slide'] as $product) { ?>
     <li class="slide-item">
-      <img src="<?= $product['img']; ?>" alt="<?= $product['name']; ?>">
+      <img src="<?= esc_url($product['img']); ?>" alt="<?= esc_attr($product['name']); ?>">
       <div class="slide-info">
         <span class="slide-preco"><?= $product['price']; ?></span>
-        <h2 class="slide-nome"><?= $product['name']; ?></h2>
-        <a class="btn-link" href="<?= $product['link']; ?>">Ver Produto</a>
+        <h2 class="slide-nome"><?= esc_html($product['name']); ?></h2>
+        <a class="btn-link" href="<?= esc_url($product['link']); ?>">Ver Produto</a>
       </div>
     </li>
     <?php } ?>
   </ul>
 </section>
 
-
-<section class="container benefits-strip">
-  <div class="benefit-item">
-    <strong>Entrega para todo o Brasil</strong>
-    <span>Receba seus produtos CKS em casa.</span>
-  </div>
-  <div class="benefit-item">
-    <strong>Pix e cartão</strong>
-    <span>Escolha a melhor forma de pagamento.</span>
-  </div>
-  <div class="benefit-item">
-    <strong>WhatsApp</strong>
-    <span>Atendimento direto para tirar dúvidas.</span>
-  </div>
-  <div class="benefit-item">
-    <strong>Produtos para revenda</strong>
-    <span>Fale com a equipe e conheça as condições.</span>
-  </div>
-</section>
-
-<section class="container">
+<section class="container home-product-section">
   <h1 class="subtitulo">Mais Vendidos</h1>
   <?php cks_product_list($data['vendidos']); ?>
 </section>
 
 <!-- Banner Revendedor -->
 <section class="banner-revendedor">
-  <a href="https://wa.me/5521964531822?text=Olá%2C+tenho+interesse+em+ser+revendedor+CKS" target="_blank" title="Fale conosco no WhatsApp">
-    <img src="<?= get_template_directory_uri(); ?>/img/bannerRevendedor.png" alt="Seja um Revendedor CKS - clique aqui para saber mais">
+  <a href="https://wa.me/5521964531822?text=Ol%C3%A1%2C+tenho+interesse+em+ser+revendedor+CKS" target="_blank" rel="noopener" title="Fale conosco no WhatsApp">
+    <img src="<?= esc_url(get_template_directory_uri()); ?>/img/bannerRevendedor.png" alt="Seja um Revendedor CKS - clique aqui para saber mais">
   </a>
 </section>
 
-
-<section class="container">
+<section class="container home-product-section">
   <h1 class="subtitulo">Lançamentos</h1>
   <?php cks_product_list($data['lancamentos']); ?>
-  
+
   <div class="ver-todos-container">
     <a href="/loja" class="btn-link">Ver todos os produtos</a>
   </div>
 </section>
 
+<section class="container home-about">
+  <div class="home-about__content">
+    <span>CKS Cosméticos</span>
+    <h2>Sobre a CKS Cosméticos</h2>
+    <p>A CKS Cosméticos oferece produtos capilares para cuidado, hidratação, reconstrução e finalização dos fios, com atendimento para clientes e revendedores.</p>
+  </div>
+</section>
 
 <?php } } ?>
 

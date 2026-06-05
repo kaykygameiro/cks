@@ -109,7 +109,12 @@
 .slide-wrapper {
   max-width: 100%;
   margin-top: 40px;
+  margin-bottom: 42px;
   overflow-x: hidden;
+}
+
+.slide-wrapper + .home-product-section {
+  margin-top: 0;
 }
 
 @media (max-width: 800px) {
@@ -213,6 +218,11 @@
   .benefits-strip {
     grid-template-columns: 1fr;
   }
+
+  .slide-wrapper {
+    margin-top: 28px;
+    margin-bottom: 30px;
+  }
 }
 
 
@@ -232,5 +242,159 @@
   
   .banner-revendedor img {
     border-radius: 4px;
+  }
+}
+
+/* HOME BUTTON POLISH */
+.slide-info .btn-link,
+.home-product-section .ver-todos-container .btn-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: max-content;
+  max-width: 100%;
+  min-height: 48px;
+  padding: 0 24px;
+  border: 0;
+  border-radius: var(--cks-radius);
+  background: var(--cks-pink-strong);
+  color: #fff;
+  font-size: .95rem;
+  font-weight: 800;
+  line-height: 1;
+  text-decoration: none !important;
+  cursor: pointer;
+  box-shadow: 0 12px 28px rgba(190, 37, 103, .18);
+  transition: background-color .2s ease, color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+
+.slide-info .btn-link::after,
+.home-product-section .ver-todos-container .btn-link::after {
+  flex: 0 0 18px;
+  filter: brightness(0) invert(1);
+}
+
+.slide-info .btn-link:hover,
+.home-product-section .ver-todos-container .btn-link:hover {
+  background: var(--cks-pink);
+  color: #fff;
+  text-decoration: none !important;
+  transform: translateY(-1px);
+  box-shadow: 0 16px 34px rgba(190, 37, 103, .24);
+}
+
+.slide-info .btn-link:focus-visible,
+.home-product-section .ver-todos-container .btn-link:focus-visible {
+  outline: 3px solid rgba(217, 31, 116, .32);
+  outline-offset: 4px;
+  background: var(--cks-pink);
+  color: #fff;
+  text-decoration: none !important;
+}
+
+.slide-info .btn-link:hover::after,
+.slide-info .btn-link:focus-visible::after,
+.home-product-section .ver-todos-container .btn-link:hover::after,
+.home-product-section .ver-todos-container .btn-link:focus-visible::after {
+  filter: brightness(0) invert(1);
+}
+
+.home-product-section .product-card {
+  cursor: pointer;
+  text-decoration: none !important;
+}
+
+.home-product-section .product-card:hover,
+.home-product-section .product-card:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--cks-pink);
+  box-shadow: var(--cks-shadow);
+  text-decoration: none !important;
+}
+
+.home-product-section .product-card:focus-visible {
+  outline: 3px solid rgba(217, 31, 116, .28);
+  outline-offset: 4px;
+}
+
+.home-product-section .product-card-cta {
+  min-height: 46px;
+  border-radius: var(--cks-radius);
+  background: var(--cks-pink-strong);
+  color: #fff;
+  font-weight: 800;
+  text-decoration: none !important;
+  box-shadow: 0 10px 22px rgba(190, 37, 103, .14);
+  transition: background-color .2s ease, box-shadow .2s ease;
+}
+
+.home-product-section .product-card:hover .product-card-cta,
+.home-product-section .product-card:focus-visible .product-card-cta {
+  background: var(--cks-pink);
+  color: #fff;
+  box-shadow: 0 14px 28px rgba(190, 37, 103, .2);
+}
+
+.home-product-section .ver-todos-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 38px;
+}
+
+.home-product-section .ver-todos-container .btn-link {
+  min-height: 50px;
+  padding-right: 28px;
+  padding-left: 28px;
+}
+
+.home-about {
+  display: grid;
+  margin-top: 44px;
+  margin-bottom: 56px;
+  padding: 22px 24px;
+  border: 1px solid var(--cks-border);
+  border-radius: var(--cks-radius);
+  background: var(--cks-rose-50);
+  box-shadow: 0 10px 24px rgba(190, 37, 103, .06);
+}
+
+.home-about__content {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+}
+
+.home-about__content span {
+  color: var(--cks-pink);
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .08rem;
+  text-transform: uppercase;
+}
+
+.home-about__content h2 {
+  color: var(--cks-ink);
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+
+.home-about__content p {
+  max-width: 760px;
+  color: var(--cks-muted);
+  font-size: .95rem;
+}
+
+@media (max-width: 520px) {
+  .slide-info .btn-link,
+  .home-product-section .ver-todos-container .btn-link {
+    width: 100%;
+    min-height: 52px;
+  }
+
+  .home-about {
+    margin-top: 34px;
+    margin-bottom: 42px;
+    padding: 18px;
   }
 }
