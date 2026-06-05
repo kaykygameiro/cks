@@ -1,7 +1,9 @@
 .footer {
-  background: #BE2567 !important;
-  padding-top: 50px;
+  background-color: #BE2567 !important;
+  color: white;
 }
+
+
 
 .footer img {
   margin: 0 auto;
