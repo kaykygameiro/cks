@@ -877,3 +877,50 @@ a.checkout-button,
     padding-left: 18px !important;
   }
 }
+
+/* === PRODUTO: BOTAO DE COMPRA === */
+.single-product .product-detail .single_add_to_cart_button.button,
+.single-product .product-detail button.single_add_to_cart_button,
+.product-template-default .product-detail .single_add_to_cart_button.button,
+.product-template-default .product-detail button.single_add_to_cart_button {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  min-height: 54px !important;
+  margin: 0 !important;
+  padding: 15px 22px !important;
+  border: 0 !important;
+  border-radius: var(--cks-radius) !important;
+  background: var(--cks-pink-strong) !important;
+  color: #fff !important;
+  font-size: 1rem !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  text-transform: none !important;
+  cursor: pointer !important;
+  box-shadow: 0 12px 28px rgba(190, 37, 103, .18) !important;
+  transition: background-color .2s ease, box-shadow .2s ease, transform .2s ease !important;
+}
+
+.single-product .product-detail .single_add_to_cart_button.button:hover,
+.single-product .product-detail button.single_add_to_cart_button:hover,
+.product-template-default .product-detail .single_add_to_cart_button.button:hover,
+.product-template-default .product-detail button.single_add_to_cart_button:hover {
+  background: var(--cks-pink) !important;
+  color: #fff !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 16px 34px rgba(190, 37, 103, .24) !important;
+}
+
+.single-product .product-detail .single_add_to_cart_button.button:focus-visible,
+.single-product .product-detail button.single_add_to_cart_button:focus-visible,
+.product-template-default .product-detail .single_add_to_cart_button.button:focus-visible,
+.product-template-default .product-detail button.single_add_to_cart_button:focus-visible {
+  outline: 3px solid rgba(217, 31, 116, .32) !important;
+  outline-offset: 4px !important;
+  background: var(--cks-pink) !important;
+  color: #fff !important;
+}
