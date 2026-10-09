@@ -17,12 +17,6 @@
   }
 }
 
-@media (max-width: 520px) {
-  .products-list {
-    grid-template-columns: 1fr;
-  }
-}
-
 .products-list h2 {
   margin-top: 0;
   font-size: 1rem;
@@ -137,4 +131,68 @@
 
 .products-archive {
   margin-top: 36px;
+}
+
+/* Vitrines mobile: mesmo componente na home, arquivos e relacionados. */
+@media (max-width: 767px) {
+  .products-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 10px;
+  }
+
+  .products-list > .product-item,
+  .products-list .product-card,
+  .products-list .product-info,
+  .products-list .product-card-body {
+    min-width: 0;
+  }
+
+  .products-list .product-card {
+    padding: 8px;
+  }
+
+  .products-list .product-info {
+    gap: 10px;
+  }
+
+  .products-list .product-image img {
+    padding: 4px;
+  }
+
+  .products-list .product-card-body {
+    grid-template-rows: auto 1fr;
+    gap: 6px;
+    min-height: 0;
+  }
+
+  .products-list .product-card h2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    overflow-wrap: anywhere;
+    font-size: .875rem;
+    min-height: 4.05em;
+    max-height: 4.05em;
+  }
+
+  .products-list .product-card-price {
+    align-self: end;
+    font-size: 1rem;
+    overflow-wrap: anywhere;
+  }
+
+  .products-list .product-card-price del {
+    display: block;
+    margin-right: 0;
+    font-size: .8125rem;
+  }
+
+  .products-list .product-card-cta {
+    min-height: 44px;
+    margin-top: 10px;
+    padding: 8px 4px;
+    font-size: .875rem;
+    text-align: center;
+  }
 }
