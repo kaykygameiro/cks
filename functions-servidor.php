@@ -44,15 +44,6 @@ function cks_css() {
 }
 add_action('wp_enqueue_scripts', 'cks_css');
 
-// Galeria propria: carregada somente na pagina individual de produto.
-function cks_enqueue_product_gallery() {
-  if (!function_exists('is_product') || !is_product()) return;
-  $file = get_template_directory() . '/js/product-gallery.js';
-  if (!file_exists($file)) return;
-  wp_enqueue_script('cks-product-gallery', get_template_directory_uri() . '/js/product-gallery.js', ['jquery'], filemtime($file), true);
-}
-add_action('wp_enqueue_scripts', 'cks_enqueue_product_gallery');
-
 
 function mudar_classe_preco() {
   return 'price';

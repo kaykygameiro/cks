@@ -10,7 +10,10 @@
       foreach($gallery_ids as $img_id) {
         $image = wp_get_attachment_image_src($img_id, $img_size);
         if($image) {
-          $gallery[] = $image[0];
+          $gallery[] = [
+            'id' => $img_id,
+            'src' => $image[0],
+          ];
         }
       }
     }
@@ -32,6 +35,7 @@
       'short_description' => $product->get_short_description(),
       'stock_html' => $stock_html,
       'img' => $main_image ? $main_image[0] : wc_placeholder_img_src($img_size),
+      'image_id' => $product->get_image_id(),
       'gallery' => $gallery,
     ];
   }
@@ -53,13 +57,24 @@
   <div class="product-gallery <?= empty($produto['gallery']) ? 'product-gallery--single' : ''; ?>" data-gallery="gallery">
     <?php if(!empty($produto['gallery'])) { ?>
       <div class="product-gallery-list">
-        <?php foreach($produto['gallery'] as $img) { ?>
-          <img data-gallery="list" src="<?= esc_url($img); ?>" alt="<?= esc_attr($produto['name']); ?>">
+        <?php $images = array_merge([['id' => $produto['image_id'], 'src' => $produto['img']]], $produto['gallery']); ?>
+        <?php foreach($images as $index => $img) { ?>
+          <button type="button" class="product-gallery-thumb" data-gallery="list"
+            data-src="<?= esc_url($img['src']); ?>"
+            data-srcset="<?= esc_attr(wp_get_attachment_image_srcset($img['id'], 'large') ?: ''); ?>"
+            aria-label="<?= esc_attr('Ver imagem ' . ($index + 1) . ' de ' . $produto['name']); ?>"
+            aria-pressed="<?= $index === 0 ? 'true' : 'false'; ?>">
+            <img src="<?= esc_url(wp_get_attachment_image_url($img['id'], 'woocommerce_gallery_thumbnail') ?: $img['src']); ?>" alt="" loading="lazy">
+          </button>
         <?php } ?>
       </div>
     <?php } ?>
     <div class="produto-gallery-main">
-      <img data-gallery="main" src="<?= esc_url($produto['img']); ?>" alt="<?= esc_attr($produto['name']); ?>">
+      <?php if($produto['image_id']) { ?>
+        <?= wp_get_attachment_image($produto['image_id'], 'large', false, ['data-gallery' => 'main', 'alt' => $produto['name'], 'loading' => 'eager', 'fetchpriority' => 'high', 'sizes' => '(max-width: 767px) calc(100vw - 30px), (max-width: 900px) calc(100vw - 40px), 460px']); ?>
+      <?php } else { ?>
+        <img data-gallery="main" src="<?= esc_url($produto['img']); ?>" alt="<?= esc_attr($produto['name']); ?>">
+      <?php } ?>
     </div>
   </div>
 

@@ -135,9 +135,19 @@
 
 /* Vitrines mobile: mesmo componente na home, arquivos e relacionados. */
 @media (max-width: 767px) {
-  .products-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  ul.products-list {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 16px 10px;
+    padding: 0;
+    list-style: none;
+  }
+
+  ul.products-list > li.product-item {
+    width: auto;
+    max-width: 100%;
+    margin: 0;
+    float: none;
   }
 
   .products-list > .product-item,
